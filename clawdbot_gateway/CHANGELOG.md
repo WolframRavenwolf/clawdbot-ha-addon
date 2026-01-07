@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.5
+- BREAKING: Renamed `repo_ref` to `branch`. Set to track a specific branch; omit to use repo's default.
+
 ## 0.2.4
 - Docs: repo-based install steps and add-on info links.
 - Docker: set WORKDIR to /opt/clawdbot.

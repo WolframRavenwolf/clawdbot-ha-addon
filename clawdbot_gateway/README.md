@@ -19,7 +19,7 @@ In the add-on configuration UI, set:
 - `ssh_authorized_keys`: your public key(s) to enable SSH access (required for tunnels).
 - `ssh_port`: default `2222`.
 - `repo_url`: optional fork URL.
-- `repo_ref`: optional git ref (commit/tag/branch) to pin the gateway version.
+- `branch`: optional branch to checkout (uses repo's default if omitted).
 - `github_token`: optional token for private forks.
 
 ## First Run

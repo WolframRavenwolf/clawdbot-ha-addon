@@ -26,7 +26,7 @@ Clawdbot Gateway for HA OS with SSH tunnel support for Mac node connections.
 | `port` | Gateway WebSocket port (default: 18789) |
 | `verbose` | Enable verbose logging |
 | `repo_url` | Clawdbot source repository |
-| `repo_ref` | Git ref to checkout (commit/tag/branch) |
+| `branch` | Branch to checkout (optional, uses repo's default if omitted) |
 | `github_token` | GitHub token for private repos |
 | `ssh_port` | SSH server port for tunnel access (default: 2222) |
 | `ssh_authorized_keys` | Public keys for SSH access |
