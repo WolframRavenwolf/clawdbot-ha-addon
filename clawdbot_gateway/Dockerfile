@@ -22,7 +22,9 @@ ARG WACLI_VERSION=latest
 
 ENV GOPATH="/go"
 ENV PNPM_HOME="/pnpm"
-ENV PATH="${GOPATH}/bin:/usr/local/go/bin:${PNPM_HOME}:${PATH}"
+ENV UV_TOOL_DIR="/usr/local/share/uv/tools"
+ENV UV_BIN_DIR="/usr/local/bin"
+ENV PATH="${GOPATH}/bin:/usr/local/go/bin:${PNPM_HOME}:${UV_BIN_DIR}:${PATH}"
 
 # Use bash with pipefail so curl|tar failures stop the build.
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -104,13 +106,13 @@ RUN case "${TARGETARCH}" in \
 RUN pnpm add -g mcporter
 
 # [🐍] 📄 nano-pdf - Edit PDFs with natural-language instructions using the nano-pdf CLI.
-RUN pip3 install --no-cache-dir --break-system-packages nano-pdf
+RUN uv tool install nano-pdf
 
 # [🐹] 💎 obsidian - Work with Obsidian vaults (plain Markdown notes) and automate via obsidian-cli.
 RUN go install github.com/Yakitrak/obsidian-cli@${OBSIDIAN_CLI_VERSION} && go clean -cache -modcache
 
 # [🐍] 🎙️ openai-whisper - Local speech-to-text with the Whisper CLI (no API key).
-RUN pip3 install --no-cache-dir --break-system-packages whisper-cli
+RUN uv tool install whisper-cli
 
 # [🐚] 💡 openhue - Control Philips Hue lights/scenes via the OpenHue CLI.
 RUN case "${TARGETARCH}" in \
