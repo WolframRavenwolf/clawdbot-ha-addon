@@ -12,7 +12,7 @@ This add-on runs the OpenClaw Gateway on Home Assistant OS, providing secure rem
 ## Installation
 
 1. In Home Assistant: **Settings → Add-ons → Add-on Store → ⋮ → Repositories**
-2. Add: `https://github.com/ngutman/clawdbot-ha-addon`
+2. Add: `https://github.com/ngutman/openclaw-ha-addon`
 3. Reload the Add-on Store and install **OpenClaw Gateway**
 
 ## Configuration

@@ -1,5 +1,5 @@
 # Repository Guidelines
-- Repo: https://github.com/ngutman/clawdbot-ha-addon
+- Repo: https://github.com/ngutman/openclaw-ha-addon
 
 ## Project Structure & Files
 - Add-on source and metadata live in `clawdbot_gateway/`.
