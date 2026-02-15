@@ -116,8 +116,8 @@ RUN pnpm add -g mcporter
 # [🐍] 📄 nano-pdf - Edit PDFs with natural-language instructions using the nano-pdf CLI.
 RUN uv tool install nano-pdf
 
-# [🐹] 💎 obsidian - Work with Obsidian vaults (plain Markdown notes) and automate via obsidian-cli.
-RUN go install github.com/Yakitrak/obsidian-cli@${OBSIDIAN_CLI_VERSION} && go clean -cache -modcache
+# [🐹] 💎 obsidian - Work with Obsidian vaults (plain Markdown notes) and automate via notesmd-cli.
+RUN go install github.com/Yakitrak/notesmd-cli@${OBSIDIAN_CLI_VERSION} && go clean -cache -modcache
 
 # [🐍] 🎙️ openai-whisper - Local speech-to-text with the Whisper CLI (no API key).
 RUN uv tool install whisper-cli
